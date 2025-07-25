@@ -9,66 +9,59 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
     <link rel="stylesheet" href="./style.css" />
-    <script src="./index.js"></script>
+   
   </head>
   <body>
-    <header>
-      <div class="topSocials">
-        <div class="socials">
-          <span> <i class="fa fa-twitter" aria-hidden="true"></i></span>
-          <span> <i class="fa fa-facebook" aria-hidden="true"></i></span>
-          <span> <i class="fa fa-instagram" aria-hidden="true"></i></span>
-        </div>
-        <div class="personalised">
-          <div class="in">
-            <h5>IN</h5>
-            <i class="fa fa-sort-desc" aria-hidden="true"></i>
-          </div>
-          <div class="language">
-            <h5>english</h5>
-            <i class="fa fa-sort-desc" aria-hidden="true"></i>
-          </div>
-          <div class="signIn">
-            <i class="fa fa-user" aria-hidden="true"></i>
-            <h5>sign in</h5>
-          </div>
-        </div>
-        <!-- hamburger code -->
-        <label for="toggle" class="hamburger">&#9776;</label>
-        <input type="checkbox" id="toggle" />
+<header>
+  <div class="topSocials">
+    <div class="socials">
+      <span><i class="fa fa-twitter"></i></span>
+      <span><i class="fa fa-facebook"></i></span>
+      <span><i class="fa fa-instagram"></i></span>
+    </div>
+    <div class="personalised">
+      <div class="in">
+        <h5>IN</h5>
+        <i class="fa fa-sort-desc"></i>
       </div>
+      <div class="language">
+        <h5>English</h5>
+        <i class="fa fa-sort-desc"></i>
+      </div>
+      <div class="signIn">
+        <i class="fa fa-user"></i>
+        <h5>Sign in</h5>
+      </div>
+    </div>
+    <button class="hamburger" id="menu-btn">&#9776;</button>
+  </div>
 
-      <nav>
-        <div class="logo">
-          <i class="fa fa-sun-o fa-2x" aria-hidden="true"></i>
-          <h3>Lightsphere</h3>
-        </div>
-        <div class="links">
-          <a style="color: #e3690b;" class="inPlay" href="#">home</a>
-          <span
-            ><a href="#">shop</a>
-            <i class="fa fa-sort-desc" aria-hidden="true"></i>
-          </span>
-          <a href="#">blog</a>
-          <span>
-            <a href="#">pages </a>
-            <i class="fa fa-sort-desc" aria-hidden="true"></i>
-          </span>
-          <a href="#">about</a>
-        </div>
-        <div class="rightNav">
-          <div class="search">
-            <input type="text" placeholder="  search" />
-            <button class="btnNav">
-              <i class="fa fa-search" aria-hidden="true"></i>
-            </button>
-          </div>
-          <button class="btnNav2">
-            <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-          </button>
-        </div>
-      </nav>
-    </header>
+  <nav>
+    <div class="logo">
+      <i class="fa fa-sun-o"></i>
+      <h3>Lightsphere</h3>
+    </div>
+    <div class="links" id="menu">
+      <a href="#">Home</a>
+      <span><a href="#">Shop <i class="fa fa-sort-desc"></i></a></span>
+      <a href="#">Blog</a>
+      <span><a href="#">Pages <i class="fa fa-sort-desc"></i></a></span>
+      <a href="#">About</a>
+    </div>
+    <div class="rightNav">
+      <div class="search">
+        <input type="text" placeholder="search">
+        <button class="btnNav">
+          <i class="fa fa-search"></i>
+        </button>
+      </div>
+      <button class="btnNav2">
+        <i class="fa fa-shopping-cart"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+
     <section id="hero">
       <div class="heroContainer">
         <div class="leftHero">
@@ -811,5 +804,14 @@
         </div>
       </div>
     </section>
+    
+<script>
+  const menuBtn = document.getElementById('menu-btn');
+  const menu = document.getElementById('menu');
+  menuBtn.addEventListener('click', () => {
+    menu.classList.toggle('active');
+  });
+</script>
+
   </body>
 </html>
